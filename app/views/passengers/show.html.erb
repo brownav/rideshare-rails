@@ -1,2 +1,50 @@
-<h1>Passengers#show</h1>
-<p>Find me in app/views/passengers/show.html.erb</p>
+<nav>
+  <ul>
+    <li>
+      <%= link_to "Home", trips_path %>
+    </li>
+    <li>
+      <%= link_to "Add Passenger", new_passenger_path %>
+    </li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Passengers Details</h1>
+</header>
+
+<main>
+  <table>
+    <tr>
+      <th>
+        Trip ID
+      </th>
+      <th>
+        Pass
+      </th>
+      <th>
+        Driver
+      </th>
+      <th>
+        Date
+      </th>
+      <th>
+        Rating
+      </th>
+      <th>
+        Cost
+      </th>
+    </tr>
+    <% @passenger.trips.all.each do |trip| %>
+      <tr>
+        <td><%= trip.id %></td>
+        <td><%= @passenger.name %></td>
+        <td><%= @drivers.find(trip.driver_id).name %></td>
+        <td><%= trip.date %></td>
+        <td><%= trip.rating %></td>
+        <td><%= trip.cost %></td>
+      </tr>
+    <%end%>
+  </table>
+
+</main>

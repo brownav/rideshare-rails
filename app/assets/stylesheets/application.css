@@ -14,9 +14,9 @@
  *= require_self
  */
 
- /* * {
+* {
    border: black solid 1px;
- } */
+ }
  body {
    background-color: lightblue;
  }
