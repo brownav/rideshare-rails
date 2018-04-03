@@ -17,6 +17,9 @@
  /* * {
    border: black solid 1px;
  } */
+ body {
+   background-color: lightblue;
+ }
 
  body {
    background-color: lightblue;

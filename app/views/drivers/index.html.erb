@@ -1,3 +1,22 @@
-<h1>Driver#index</h1>
+<nav>
+  <ul>
+    <li>
+      <%= link_to "Home", trips_path %>
+    </li>
+    <li>
+      <%= link_to "Add Driver", new_driver_path %>
+    </li>
+  </ul>
+</nav>
 
-<p>Find me in app/views/drivers/index.html.erb</p>
+<h1>All Drivers</h1>
+
+<main>
+  <ul>
+    <% @drivers.each do |driver| %>
+    <li>
+       <%= link_to driver.name, driver_path(driver.id) %>
+    </li>
+    <% end %>
+  </ul>
+</main>
