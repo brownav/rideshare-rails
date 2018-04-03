@@ -5,6 +5,7 @@ class DriversController < ApplicationController
 
   def show
     id = params[:id]
+    @passengers = Passenger.all
     @driver = Driver.find(id)
   end
 

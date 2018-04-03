@@ -1,2 +1,50 @@
-<h1>Driver#show</h1>
-<p>Find me in app/views/drivers/show.html.erb</p>
+<nav>
+  <ul>
+    <li>
+      <%= link_to "Home", trips_path %>
+    </li>
+    <li>
+      <%= link_to "Add Driver", new_driver_path %>
+    </li>
+  </ul>
+</nav>
+
+<h1>Driver Details</h1>
+
+<main>
+  <main>
+    <table>
+      <tr>
+        <th>
+          Trip ID
+        </th>
+        <th>
+          Driver
+        </th>
+        <th>
+          Passenger
+        </th>
+        <th>
+          Date
+        </th>
+        <th>
+          Rating
+        </th>
+        <th>
+          Cost
+        </th>
+      </tr>
+      <% @driver.trips.all.each do |trip| %>
+        <tr>
+          <td><%= trip.id %></td>
+          <td><%= @driver.name %></td>
+          <td><%= @passengers.find(trip.passenger_id).name %></td>
+          <td><%= trip.date %></td>
+          <td><%= trip.rating %></td>
+          <td><%= trip.cost %></td>
+        </tr>
+      <%end%>
+    </table>
+
+  </main>
+</main>
