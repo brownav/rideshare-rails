@@ -17,3 +17,22 @@ body {
  *= require_tree .
  *= require_self
  */
+
+ /* * {
+   border: black solid 1px;
+ } */
+
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.grouping {
+  margin: 2em;
+}
+
+article {
+  margin: 4em;
+}
