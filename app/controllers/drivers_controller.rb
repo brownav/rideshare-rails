@@ -42,6 +42,6 @@ class DriversController < ActionController
   private
 
   def driver_params
-    return params.require(:driver).permit(:name, :description, :due_date, :status)
+    return params.require(:driver).permit(:name, :vin)
   end
 end

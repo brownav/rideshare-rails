@@ -41,6 +41,6 @@ class TripsController < ActionController
   private
 
   def trip_params
-    return params.require(:trip).permit(:name, :description, :due_date, :status)
+    return params.require(:trip).permit(:driver_id, :passenger_id, :date, :rating, :cost)
   end
 end
