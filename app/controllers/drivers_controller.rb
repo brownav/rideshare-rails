@@ -1,5 +1,4 @@
-class DriversController < ActionController
-
+class DriversController < ApplicationController
   def index
     @drivers = Driver.all
   end
