@@ -10,9 +10,16 @@
 </nav>
 
 <header>
-  <h1>Passengers Details</h1>
+  <h1><%=@passenger.name%></h1>
+  <section>
+    <p>
+      Phone Number: <%= @passenger.phone_num %>
+    </p>
+    <p>
+      <%= link_to "Edit", edit_passenger_path(@passenger.id)%>
+    </p>
+  </section>
 </header>
-
 <main>
   <table>
     <tr>
@@ -46,5 +53,7 @@
       </tr>
     <%end%>
   </table>
+
+
 
 </main>
