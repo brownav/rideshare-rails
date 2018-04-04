@@ -38,9 +38,9 @@
         <td><%= @trip.id %></td>
         <td><%= @trip.date %></td>
 
-        <td><%= link_to @trip.driver.name, driver_path(@drivers.find_by(id: @trip.id))%></td>
+        <td><%= link_to @trip.driver.name, driver_path(@trip.driver_id)%></td>
 
-        <td><%= link_to @trip.passenger.name, passenger_path(@passengers.find_by(id: @trip.id))%></td>
+        <td><%= link_to @trip.passenger.name, passenger_path(@trip.passenger_id)%></td>
 
         <td>$<%= @trip.cost.to_f/100 %></td>
         <td><%= @trip.rating %></td>

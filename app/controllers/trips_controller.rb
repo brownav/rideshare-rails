@@ -4,8 +4,6 @@ class TripsController < ApplicationController
   end
 
   def show
-    @drivers = Driver.all
-    @passengers = Passenger.all
 
     id = params[:id]
     @trip = Trip.find(id)
