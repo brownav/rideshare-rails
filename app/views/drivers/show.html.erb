@@ -38,10 +38,10 @@
         <tr>
           <td><%= trip.id %></td>
           <td><%= @driver.name %></td>
-          <td><%= @passengers.find(trip.passenger_id).name %></td>
+          <td><%= link_to @passengers.find(trip.passenger_id).name, passenger_path(trip.passenger_id) %></td>
           <td><%= trip.date %></td>
           <td><%= trip.rating %></td>
-          <td><%= trip.cost %></td>
+          <td>$<%= trip.cost.to_f/100 %></td>
         </tr>
       <%end%>
     </table>
