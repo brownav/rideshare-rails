@@ -15,7 +15,7 @@ class PassengersController < ApplicationController
 
   def create
     @passenger = Passenger.new(passenger_params)
-    if @Passenger.save
+    if @passenger.save
       redirect_to passengers_path
     else
       render :new
@@ -28,7 +28,7 @@ class PassengersController < ApplicationController
 
   def update
     @passenger = Passenger.find_by(id: params[:id])
-    if @Passenger.update(passenger_params)
+    if @passenger.update(passenger_params)
       redirect_to passengers_path
     else
       render :edit

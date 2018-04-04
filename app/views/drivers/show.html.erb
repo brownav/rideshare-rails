@@ -12,39 +12,37 @@
 <h1>Driver Details</h1>
 
 <main>
-  <main>
-    <table>
+  <table>
+    <tr>
+      <th>
+        Trip ID
+      </th>
+      <th>
+        Driver
+      </th>
+      <th>
+        Passenger
+      </th>
+      <th>
+        Date
+      </th>
+      <th>
+        Rating
+      </th>
+      <th>
+        Cost
+      </th>
+    </tr>
+    <% @driver.trips.all.each do |trip| %>
       <tr>
-        <th>
-          Trip ID
-        </th>
-        <th>
-          Driver
-        </th>
-        <th>
-          Passenger
-        </th>
-        <th>
-          Date
-        </th>
-        <th>
-          Rating
-        </th>
-        <th>
-          Cost
-        </th>
+        <td><%= trip.id %></td>
+        <td><%= @driver.name %></td>
+        <td><%= link_to @passengers.find(trip.passenger_id).name, passenger_path(trip.passenger_id) %></td>
+        <td><%= trip.date %></td>
+        <td><%= trip.rating %></td>
+        <td>$<%= trip.cost.to_f/100 %></td>
       </tr>
-      <% @driver.trips.all.each do |trip| %>
-        <tr>
-          <td><%= link_to trip.id, trip_path(trip.id) %></td>
-          <td><%= @driver.name %></td>
-          <td><%= link_to @passengers.find(trip.passenger_id).name, passenger_path(trip.passenger_id) %></td>
-          <td><%= trip.date %></td>
-          <td><%= trip.rating %></td>
-          <td>$<%= trip.cost.to_f/100 %></td>
-        </tr>
       <%end%>
     </table>
 
-  </main>
 </main>

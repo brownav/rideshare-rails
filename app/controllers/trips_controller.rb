@@ -1,11 +1,14 @@
 class TripsController < ApplicationController
   def index
-  @trips = Trip.all
+    @trips = Trip.all
   end
 
   def show
-  id = params[:id]
-  @trip = Trip.find(id)
+    @drivers = Driver.all
+    @passengers = Passenger.all
+
+    id = params[:id]
+    @trip = Trip.find(id)
   end
 
   def new
