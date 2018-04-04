@@ -20,7 +20,7 @@
         Trip ID
       </th>
       <th>
-        Pass
+        Passenger
       </th>
       <th>
         Driver
@@ -39,10 +39,10 @@
       <tr>
         <td><%= trip.id %></td>
         <td><%= @passenger.name %></td>
-        <td><%= @drivers.find(trip.driver_id).name %></td>
+        <td><%= link_to @drivers.find(trip.driver_id).name, driver_path(trip.driver_id) %></td>
         <td><%= trip.date %></td>
         <td><%= trip.rating %></td>
-        <td><%= trip.cost %></td>
+        <td>$<%= trip.cost.to_f/100 %></td>
       </tr>
     <%end%>
   </table>
