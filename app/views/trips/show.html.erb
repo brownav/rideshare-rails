@@ -3,9 +3,6 @@
     <li>
       <%= link_to "Home", trips_path %>
     </li>
-    <li>
-      <%= link_to "Add Driver", new_driver_path %>
-    </li>
   </ul>
 </nav>
 <header>
@@ -40,8 +37,11 @@
       <tr>
         <td><%= @trip.id %></td>
         <td><%= @trip.date %></td>
-        <td><%= @trip.driver.name %></td>
-        <td><%= @trip.passenger.name %></td>
+
+        <td><%= link_to @trip.driver.name, driver_path(@drivers.find_by(id: @trip.id))%></td>
+
+        <td><%= link_to @trip.passenger.name, passenger_path(@passengers.find_by(id: @trip.id))%></td>
+
         <td>$<%= @trip.cost.to_f/100 %></td>
         <td><%= @trip.rating %></td>
         <td>
