@@ -1,2 +1,12 @@
-<h1>Passengers#new</h1>
-<p>Find me in app/views/passengers/new.html.erb</p>
+<nav>
+  <ul>
+    <li>
+      <%= link_to "Home", trips_path %>
+    </li>
+  </ul>
+</nav>
+
+<header>
+  <h1>New Passenger</h1>
+</header>
+<%= render partial: "form", locals: {page_title: "Please enter new information for a new passenger!"} %>

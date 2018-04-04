@@ -1,2 +1,12 @@
-<h1>Passengers#edit</h1>
-<p>Find me in app/views/passengers/edit.html.erb</p>
+<nav>
+  <ul>
+    <li>
+      <%= link_to "Home", trips_path %>
+    </li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Edit Passenger</h1>
+</header>
+<%= render partial: "form", locals: {page_title: "Please update information for a passenger"} %>
