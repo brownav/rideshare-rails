@@ -3,4 +3,5 @@ class Passenger < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :phone_num, presence: true
+
 end
