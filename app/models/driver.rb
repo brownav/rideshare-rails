@@ -22,5 +22,4 @@ class Driver < ApplicationRecord
     total = (subtotal * 0.8)/100
     return total.round(2)
   end
-
 end
