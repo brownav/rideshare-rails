@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :passengers do
-    resources :trips, only: [:show, :edit, :destroy]
+    resources :trips, only: [:show, :edit, :destroy, :new]
   end
 
   root 'trips#index'
