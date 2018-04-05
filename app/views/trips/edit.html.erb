@@ -1,4 +1,4 @@
-<h2>Edit Trip</h2>
+<h2>Edit Trip for <%= @trip.passenger.name %></h2>
 
 <% if @trip.errors.any? %>
   <ul class="errors">
@@ -12,10 +12,7 @@
 
 <%= form_for @trip do |f| %>
 <%= f.label :driver %>
-<%= f.text_field @trip.driver.name %><br/><br/>
-
-<%= f.label :passenger %>
-<%= f.text_field :passenger %><br/><br/>
+<%= f.select :driver_id, Driver.all.map { |driver| [driver.name, driver.id]} %><br/><br/>
 
 <%= f.label :date %>
 <%= f.date_field :date %><br/><br/>
