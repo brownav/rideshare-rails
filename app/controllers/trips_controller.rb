@@ -24,6 +24,7 @@ class TripsController < ApplicationController
 
   def edit
     @trip = Trip.find_by(id: params[:id])
+    @trip.driver = Driver.find(params[:driver_id]).name
   end
 
   def update
