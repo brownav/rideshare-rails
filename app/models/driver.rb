@@ -14,12 +14,13 @@ class Driver < ApplicationRecord
   end
 
   def total_earnings
-    total = 0
+    subtotal = 0
     self.trips.each do |trip|
       trip.cost -= 1.65
-      total += trip.cost
+      subtotal += trip.cost
     end
-    return total * .8
+    total = (subtotal * 0.8)/100
+    return total.round(2)
   end
 
 end
