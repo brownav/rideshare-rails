@@ -46,11 +46,18 @@
       <tr>
         <td><%= link_to trip.id, driver_trip_path(trip.id) %></td>
         <td><%= @driver.name %></td>
-        <td><%= link_to @passengers.find(trip.passenger_id).name, passenger_path(trip.passenger_id) %></td>
-        <td><%= trip.date %></td>
-        <td><%= trip.rating %></td>
-        <td>$<%= trip.cost.to_f/100 %></td>
-      </tr>
+        <td>
+          <%if trip.passenger_id %>
+            <%= link_to @passengers.find(trip.passenger_id).name, passenger_path(trip.passenger_id) %>
+            <% else %>
+            <%= link_to "Deleted passenger", passengers_path %>
+          <%end%>
+      </td>
+      <td><%= trip.date %></td>
+      <td><%= trip.rating %></td>
+      <td>$<%= trip.cost.to_f/100 %></td>
     <%end%>
-  </table>
+  </tr>
+</table>
+
 </main>
