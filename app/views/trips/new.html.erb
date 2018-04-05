@@ -12,7 +12,7 @@
 
 <%= form_for @trip do |f| %>
 <%= f.label :driver %>
-<!-- <%= f. :driver, Driver.all.sample %><br/><br/> -->
+<%= f.text_field :driver, :value => Driver.all.sample.name %><br/><br/>
 
 <%= f.label :date %>
 <%= f.date_field :date %><br/><br/>
