@@ -19,8 +19,9 @@
   } */
 
  body {
-   background-color: lightblue;
-   font-family: 'Song Myung', serif;
+   background-color: #A9BBCE;
+   font-family: 'VT323', monospace;
+   font-size: 1.5em;
  }
 
  nav ul {
