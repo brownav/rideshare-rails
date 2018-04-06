@@ -46,7 +46,7 @@
 .grouping {
   margin: 2em;
   background-color: #F9D9D9;
-  border: double lightblue 1em;
+  border: double #A9BBCE 1em;
   border-radius: 50px;
   width: 15em;
   text-align: center;
