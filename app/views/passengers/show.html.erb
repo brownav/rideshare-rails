@@ -33,7 +33,9 @@
 
 <main>
   <section>
-    <strong><%= link_to "New Trip", new_passenger_trip_path(@passenger.id) %></strong>
+    <% if @passenger.trips.last.rating != nil %>
+      <strong><%= link_to "New Trip", new_passenger_trip_path(@passenger.id) %></strong>
+      <%end%>
   </section><br />
   <table>
     <tr>
