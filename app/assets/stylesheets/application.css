@@ -14,9 +14,9 @@
  *= require_self
  */
 
-* {
+/* * {
    border: black solid 1px;
-  }
+  } */
 
  body {
    background-color: lightblue;
@@ -31,7 +31,14 @@
 
 .grouping {
   margin: 2em;
+  background-color: #F9D9D9;
+  border: double lightblue 1em;
+  border-radius: 50px;
+  width: 15em;
+  text-align: center;
+  text-decoration: none;
 }
+
 
 article {
   margin: 4em;
