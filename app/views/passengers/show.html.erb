@@ -70,9 +70,15 @@
           <%end%>
       </td>
       <td><%= trip.date %></td>
-      <td><%= trip.rating %></td>
+      <td>
+        <% if trip.rating != nil %>
+        <%= trip.rating %>
+        <% else %>
+        <%= link_to "Edit", edit_trip_path(trip.id) %>
+        <% end %>
+      </td>
       <td><%= number_to_currency(trip.cost/100) %></td>
-    <%end%>
     </tr>
+    <% end %>
   </table>
 </main>
