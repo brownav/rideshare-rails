@@ -77,7 +77,7 @@
         <%= link_to "Edit", edit_trip_path(trip.id) %>
         <% end %>
       </td>
-      <td><%= number_to_currency(trip.cost/100) %></td>
+      <td>$<%= trip.cost.to_f/100 %></td>
     </tr>
     <% end %>
   </table>

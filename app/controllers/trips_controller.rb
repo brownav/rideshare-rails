@@ -12,7 +12,7 @@ class TripsController < ApplicationController
     passenger = Passenger.find_by(id: params[:passenger_id])
 
     driver = Driver.all.sample
-    cost = rand(500...20000)
+    cost = rand(500...2000)
     date = Date.today
     rating = nil
 

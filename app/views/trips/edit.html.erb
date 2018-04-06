@@ -21,7 +21,7 @@
 <%= f.select :rating, [[1], [2], [3], [4], [5]], {}, {class: "form-control"} %><br/><br/>
 
 <%= f.label :cost %>
-<%= f.text_field :cost %><br/><br/>
+$<%= @trip.cost.to_f/100 %><br/><br/>
 
 <%= f.submit %>
 <% end %>
