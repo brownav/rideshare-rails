@@ -74,7 +74,7 @@
         <% if trip.rating != nil %>
         <%= trip.rating %>
         <% else %>
-        <%= link_to "Edit", edit_trip_path(trip.id) %>
+        <%= link_to "Rate Trip to Finish", edit_trip_path(trip.id) %>
         <% end %>
       </td>
       <td>$<%= trip.cost.to_f/100.round(2) %></td>
