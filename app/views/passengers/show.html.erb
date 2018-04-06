@@ -36,7 +36,7 @@
     <% if @passenger.trips.count < 1 || @passenger.trips.last.rating != nil %>
       <strong><%= link_to "New Trip", new_passenger_trip_path(@passenger.id) %></strong>
       <%end%>
-  </section><br />
+  </section><br /><br /><br />
   <table>
     <tr>
       <th>
