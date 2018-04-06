@@ -36,7 +36,7 @@ class TripsController < ApplicationController
   def update
     @trip = Trip.find_by(id: params[:id])
     if @trip.update(trip_params)
-      redirect_to passenger_trip_path(@trip.passenger)
+      redirect_to passenger_path(@trip.passenger)
     else
       render :edit
     end
