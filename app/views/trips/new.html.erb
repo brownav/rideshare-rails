@@ -13,7 +13,6 @@
 <%= form_for @trip do |f| %>
 <%= f.label :driver %>:
 <%= Driver.all.sample.name %><br/><br/>
-<%= f.hidden_field :driver %>
 
 <%= f.label :date %>:
 <%= Date.today %><br/><br/>
