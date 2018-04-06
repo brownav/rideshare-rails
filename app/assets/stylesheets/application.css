@@ -56,3 +56,13 @@
 article {
   margin: 4em;
 }
+
+table, th, td {
+  text-align: center;
+  padding-bottom: .75em;
+}
+
+th, td {
+
+  padding-right: 1em;
+}
