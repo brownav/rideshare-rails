@@ -6,15 +6,22 @@ class Driver < ApplicationRecord
 
   def avg_rating
     total_rating = 0
+    trip_count = 0
+
     self.trips.all.each do |trip|
-      total_rating += trip.rating
+      if trip.rating
+        total_rating += trip.rating
+        trip_count += 1
+      end
     end
-    average_rating = total_rating/self.trips.length.to_f
+
+    average_rating = total_rating/trip_count
     return average_rating.round(1)
   end
 
   def total_earnings
     subtotal = 0
+
     self.trips.each do |trip|
       trip.cost -= 1.65
       subtotal += trip.cost
