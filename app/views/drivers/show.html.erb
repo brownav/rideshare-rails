@@ -47,7 +47,7 @@
     </tr>
     <% @driver.trips.all.each do |trip| %>
       <tr>
-        <td><%= link_to trip.id, driver_trip_path(trip.id) %></td>
+        <td><%= link_to trip.id, trip_path(trip.id) %></td>
         <td><%= @driver.name %></td>
         <td>
           <%if trip.passenger_id %>

@@ -5,18 +5,23 @@ class Driver < ApplicationRecord
   validates :vin, presence: true, uniqueness: true
 
   def avg_rating
-    total_rating = 0
-    trip_count = 1
+    if self.trips.count == 0
+      return "No trips yet"
+    else
+      total_rating = 0
+      trip_count = 0
 
-    self.trips.all.each do |trip|
-      if trip.rating
-        total_rating += trip.rating
-        trip_count += 1
+      self.trips.all.each do |trip|
+        if trip.rating
+          total_rating += trip.rating
+          trip_count += 1
+        end
       end
-    end
 
-    average_rating = total_rating/trip_count
-    return average_rating > 0 ? average_rating.round(1) : 0
+      average_rating = total_rating.to_f/trip_count
+      
+      return average_rating.round(1)
+    end
   end
 
   def total_earnings
