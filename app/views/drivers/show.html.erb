@@ -12,14 +12,14 @@
 <h1><%= @driver.name %></h1>
 <section>
   <p>
-    Rating: <%= @driver.avg_rating %>
+    <strong>Average Rating:</strong> <%= @driver.avg_rating %>
   </p>
   <p>
-    Total Earnings: $<%= @driver.total_earnings %>
+    <strong>Total Earnings:</strong> $<%= @driver.total_earnings %>
   </p>
   <p>
-    <%= link_to "Edit", edit_driver_path %>
-    <%= link_to "Delete", driver_path(@driver.id), method: :delete, data: { confirm: 'Are you sure you want to delete this driver?' } %>
+    <strong><%= link_to "Edit", edit_driver_path %></strong>
+    <strong><%= link_to "Delete", driver_path(@driver.id), method: :delete, data: { confirm: 'Are you sure you want to delete this driver?' } %></strong>
   </p>
 </section>
 

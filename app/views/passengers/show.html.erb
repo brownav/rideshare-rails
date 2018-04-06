@@ -19,21 +19,21 @@
   <h1><%=@passenger.name%></h1>
   <section>
     <p>
-      Phone Number: <%= @passenger.phone_num %>
+      <strong>Phone Number:</strong> <%= @passenger.phone_num %>
     </p>
     <p>
-      Total Paid: $<%= @passenger.total_paid %>
+      <strong>Total Paid:</strong> $<%= @passenger.total_paid %>
     </p>
     <p>
-      <%= link_to "Edit", edit_passenger_path(@passenger.id)%>
-      <%= link_to "Delete", passenger_path(@passenger.id), method: :delete, data: { confirm: 'Are you sure you want to delete this passenger?' }  %>
+      <strong><%= link_to "Edit", edit_passenger_path(@passenger.id)%></strong>
+      <strong><%= link_to "Delete", passenger_path(@passenger.id), method: :delete, data: { confirm: 'Are you sure you want to delete this passenger?' } %></strong>
     </p>
   </section>
 </header>
 
 <main>
   <section>
-    <%= link_to "New Trip", new_passenger_trip_path(@passenger.id) %>
+    <strong><%= link_to "New Trip", new_passenger_trip_path(@passenger.id) %></strong>
   </section><br />
   <table>
     <tr>

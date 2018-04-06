@@ -6,7 +6,7 @@ class Driver < ApplicationRecord
 
   def avg_rating
     total_rating = 0
-    trip_count = 0
+    trip_count = 1
 
     self.trips.all.each do |trip|
       if trip.rating
@@ -16,7 +16,7 @@ class Driver < ApplicationRecord
     end
 
     average_rating = total_rating/trip_count
-    return average_rating.round(1)
+    return average_rating > 0 ? average_rating.round(1) : 0
   end
 
   def total_earnings
